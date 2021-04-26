@@ -22,9 +22,7 @@ public class Program {
 
         double tax = 1.1;
 
-        Consumer<Product> consumer = p -> p.setPrice(p.getPrice() * tax);
-
-        list.forEach(consumer);
+        list.forEach(p -> p.setPrice(p.getPrice() * tax));
 
         list.forEach(System.out::println);
     }
